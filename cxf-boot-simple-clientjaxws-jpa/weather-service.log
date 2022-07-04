@@ -1,0 +1,64 @@
+2026 [main] INFO  d.c.s.CxfBootSimpleClientApplication - Starting CxfBootSimpleClientApplication using Java 1.8.0_202 on DESKTOP-6OCM71C with PID 30112 (E:\spring_boot\cxf-boot-simple-clientjaxws-jpa\target\classes started by JORGE-00 in E:\spring_boot\cxf-boot-simple-clientjaxws-jpa)
+2031 [main] INFO  d.c.s.CxfBootSimpleClientApplication - No active profile set, falling back to default profiles: default
+4816 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+4818 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+5019 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+5654 [main] DEBUG d.c.c.a.InterfaceIncludingClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\spring_boot\cxf-spring-boot-starter\cxf-spring-boot-starter-samples\cxf-boot-simple\target\classes\org\jlsanchez\webapp\jaxws\services\CursoServicioWsImplService.class]
+5670 [main] INFO  d.c.c.a.WebServiceAutoDetector - Found WebServiceClient class: 'org.jlsanchez.webapp.jaxws.services.CursoServicioWsImplService'
+6528 [main] DEBUG d.c.cxf.logging.TimeLoggingFilter - Filter 'timeLoggingFilter' configured for use
+7413 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cxfBootSimpleClientConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'webservice.client.url' in value "${webservice.client.url}"
+7418 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+7484 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cxfBootSimpleClientConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'webservice.client.url' in value "${webservice.client.url}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at de.codecentric.soap.CxfBootSimpleClientApplication.main(CxfBootSimpleClientApplication.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'webservice.client.url' in value "${webservice.client.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+1800 [main] INFO  d.c.s.CxfBootSimpleClientApplication - Starting CxfBootSimpleClientApplication using Java 1.8.0_202 on DESKTOP-6OCM71C with PID 18172 (E:\spring_boot\cxf-boot-simple-clientjaxws-jpa\target\classes started by JORGE-00 in E:\spring_boot\cxf-boot-simple-clientjaxws-jpa)
+1805 [main] INFO  d.c.s.CxfBootSimpleClientApplication - No active profile set, falling back to default profiles: default
+4594 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+4595 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+4801 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+6360 [main] INFO  o.a.c.w.s.f.ReflectionServiceFactoryBean - Creating Service {http://services.jaxws.webapp.jlsanchez.org/}CursoServicioWsService from class org.jlsanchez.webapp.jaxws.services.CursoServicioWs
+8243 [main] DEBUG d.c.c.a.InterfaceIncludingClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\spring_boot\cxf-spring-boot-starter\cxf-spring-boot-starter-samples\cxf-boot-simple\target\classes\org\jlsanchez\webapp\jaxws\services\CursoServicioWsImplService.class]
+8246 [main] INFO  d.c.c.a.WebServiceAutoDetector - Found WebServiceClient class: 'org.jlsanchez.webapp.jaxws.services.CursoServicioWsImplService'
+9940 [main] INFO  d.c.s.CxfBootSimpleClientApplication - Started CxfBootSimpleClientApplication in 9.663 seconds (JVM running for 10.904)
+10153 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+1950 [main] INFO  d.c.s.CxfBootSimpleClientApplication - Starting CxfBootSimpleClientApplication using Java 1.8.0_202 on DESKTOP-6OCM71C with PID 17564 (E:\spring_boot\cxf-boot-simple-clientjaxws-jpa\target\classes started by JORGE-00 in E:\spring_boot\cxf-boot-simple-clientjaxws-jpa)
+1956 [main] INFO  d.c.s.CxfBootSimpleClientApplication - No active profile set, falling back to default profiles: default
+7462 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+7467 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+8070 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11146 [main] INFO  o.a.c.w.s.f.ReflectionServiceFactoryBean - Creating Service {http://services.jaxws.webapp.jlsanchez.org/}CursoServicioWsService from class org.jlsanchez.webapp.jaxws.services.CursoServicioWs
+13346 [main] DEBUG d.c.c.a.InterfaceIncludingClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\spring_boot\cxf-spring-boot-starter\cxf-spring-boot-starter-samples\cxf-boot-simple\target\classes\org\jlsanchez\webapp\jaxws\services\CursoServicioWsImplService.class]
+13349 [main] INFO  d.c.c.a.WebServiceAutoDetector - Found WebServiceClient class: 'org.jlsanchez.webapp.jaxws.services.CursoServicioWsImplService'
+15260 [main] INFO  d.c.s.CxfBootSimpleClientApplication - Started CxfBootSimpleClientApplication in 14.994 seconds (JVM running for 16.377)
+16142 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'

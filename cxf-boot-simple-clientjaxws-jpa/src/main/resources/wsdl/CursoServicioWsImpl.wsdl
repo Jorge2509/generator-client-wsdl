@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://services.jaxws.webapp.jlsanchez.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CursoServicioWsImplService" targetNamespace="http://services.jaxws.webapp.jlsanchez.org/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.jaxws.webapp.jlsanchez.org/" elementFormDefault="unqualified" targetNamespace="http://services.jaxws.webapp.jlsanchez.org/" version="1.0">
+
+  <xs:element name="crear" type="tns:crear"/>
+
+  <xs:element name="crearResponse" type="tns:crearResponse"/>
+
+  <xs:element name="listar" type="tns:listar"/>
+
+  <xs:element name="listarResponse" type="tns:listarResponse"/>
+
+  <xs:complexType name="crear">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:curso"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string"/>
+      <xs:element minOccurs="0" name="duracion" type="xs:double"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="instructor" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="crearResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:curso"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listar">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listarResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:curso"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="crear">
+    <wsdl:part element="tns:crear" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="crearResponse">
+    <wsdl:part element="tns:crearResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarResponse">
+    <wsdl:part element="tns:listarResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listar">
+    <wsdl:part element="tns:listar" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CursoServicioWs">
+    <wsdl:operation name="crear">
+      <wsdl:input message="tns:crear" name="crear">
+    </wsdl:input>
+      <wsdl:output message="tns:crearResponse" name="crearResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listar">
+      <wsdl:input message="tns:listar" name="listar">
+    </wsdl:input>
+      <wsdl:output message="tns:listarResponse" name="listarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CursoServicioWsImplServiceSoapBinding" type="tns:CursoServicioWs">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="crear">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="crear">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="crearResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CursoServicioWsImplService">
+    <wsdl:port binding="tns:CursoServicioWsImplServiceSoapBinding" name="CursoServicioWsImplPort">
+      <soap:address location="http://localhost:8080/webapp-jaxws-jpa/CursoServicioWsImpl"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
