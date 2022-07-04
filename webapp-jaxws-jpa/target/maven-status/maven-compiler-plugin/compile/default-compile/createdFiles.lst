@@ -1,0 +1,6 @@
+org\jlsanchez\webapp\jaxws\repository\CursoRepositorio.class
+org\jlsanchez\webapp\jaxws\services\CursoServicioWsImpl.class
+org\jlsanchez\webapp\jaxws\ProducerEntityManager.class
+org\jlsanchez\webapp\jaxws\models\Curso.class
+org\jlsanchez\webapp\jaxws\repository\CursoRepositorioImpl.class
+org\jlsanchez\webapp\jaxws\services\CursoServicioWs.class
